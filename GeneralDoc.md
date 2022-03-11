@@ -1,11 +1,7 @@
-    gpempy -- GeneralDoc
-    Copyright (C) 2022 V.Pelgrims
-
 ---
 
-#				 G P E M P Y
-
-#		    Galactic Polarized EMission in PYthon
+#				 G P E M P Y  
+		    Galactic Polarized EMission in PYthon
 
 ***
 
@@ -75,4 +71,6 @@ Pelgrims, Macías-Pérez, Ruppin,
 Astronomy & Astrophysics, Volume 652, id.A130, 31 pp.
 10.1051/0004-6361/201833962
 
-
+---
+gpempy -- GeneralDoc  
+Copyright (C) 2022 V.Pelgrims
