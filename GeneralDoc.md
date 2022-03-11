@@ -38,23 +38,32 @@ The production of full-sky maps of polarized observable requires:
 In the package ``gpempy`` the workload is divided into four different modules, each dedicated to handling a specific part of the simulation process.
 
 * [GalaxyBasics](GalaxyBasics.py) : that module is devoted
-** to specify the Galactic space to be taken into account
-** to define a convenient sampling of that space for the line-of-sight integration (based on HEALPix tessellation)
-** to contain all the functions required for coordinate transformations and, in particular, to go from Galactocentric reference frame to heliocentric reference frame (the observer space) with scalar and vectorial quantities.
+
+	** to specify the Galactic space to be taken into account
+
+	** to define a convenient sampling of that space for the line-of-sight integration (based on HEALPix tessellation)
+
+	** to contain all the functions required for coordinate transformations and, in particular, to go from Galactocentric reference frame to heliocentric reference frame (the observer space) with scalar and vectorial quantities.
 
 * [GalacticProfile](GalacticProfile.py) : that module is devoted
-** to populate the Galaxy, defined from the above module, with matter density distribution.
+
+	** to populate the Galaxy, defined from the above module, with matter density distribution.
 It allows various different shapes (e.g., exponential disk, spherical halo, clumps, ...) with easily modulable functional forms of the coordinate functions.
-** to visualize easily the resulting density distribution (cross-cut of the Galaxy and sky-projection)
+
+	** to visualize easily the resulting density distribution (cross-cut of the Galaxy and sky-projection)
 
 * [BFIELD](BFIELD.py) : that module is devoted
-** to populate the Galaxy with a given parametric model of the Galactic magnetic field.
+
+	** to populate the Galaxy with a given parametric model of the Galactic magnetic field.
 It shall allows the user to choose among the numerous parametric models that can be found in the literature and potentially to modify some functional forms as well.
-** to visualize easily the resulting magnetic vector field (cross-cut of the Galaxy and sky-projection)
+
+	** to visualize easily the resulting magnetic vector field (cross-cut of the Galaxy and sky-projection)
 
 * [GalacticForegrounds](GalacticForegrounds.py) : that module is devoted
-** to compute the infinitesimal contributions of the diffuse emission according to specified models (at least for the dust)
-** to proceed to the integration along the line-of-sight of the latter infinitesimal contributions to produce the diffuse emission sky map, strictly speaking, of the polarization observables.
+
+	** to compute the infinitesimal contributions of the diffuse emission according to specified models (at least for the dust)
+
+	** to proceed to the integration along the line-of-sight of the latter infinitesimal contributions to produce the diffuse emission sky map, strictly speaking, of the polarization observables.
 
 
 
