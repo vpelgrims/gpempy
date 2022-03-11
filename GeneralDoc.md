@@ -1,13 +1,12 @@
----
+				 G P E M P Y
 
-#				 G P E M P Y  
 		    Galactic Polarized EMission in PYthon
 
 ***
 
 ### History:
 
-gpempy has been developed originaly in Python 2.7 in the framework of the
+``gpempy`` has been developed originaly in Python 2.7 in the framework of the
 [RADIOFOREGROUNDS](https://radioforegrounds.eu) project (radioforegrounds.eu) to reconstruct the large-scale
 magnetic field of the Milky Way through the observation and analysis of the
 diffuse polarized emission measured at submillimeter wavelengths by
@@ -19,7 +18,7 @@ The codes has been upgraded in 2022 so that it can be run under Python 3.x.
 Our Galaxy is filled by an interstellar magnetic field that has an average strength of a few microgauss. This magnetic field lies in the entire disk of our Galaxy and extends into the halo up to high Galactic latitudes. The Galactic magnetic field appears to be inhomogeneous and it shows rapid spatial variations in magnitude and orientation. Some matter constituents of the Galaxy, such as dust grains or relativistic electrons, are sensitive to the ambient magnetic field. Matter and magnetic field couple in a complex way that leads to the emission of polarized light. In the domain of radio to submillimeter wavelengths, the polarized diffuse emissions are the synchrotron emission and the thermal dust emission, below and above about 80 GHz respectively. These diffuse emissions come from relativistic electrons that spiral along the lines of the magnetic field and from aspherical dust grains that line up their shortest axes with the magnetic field lines.
 
 In principle, sky maps of the synchrotron and of the thermal dust polarized emissions may serve to study and constrain Galactic magnetic field models.
-This suite of codes, gpempy, has been designed to make it possible to simulate full-sky maps of the Stokes parameters of the linear polarization of the synchrotron and thermal dust emission out of parametric models describing at large scales the matter density distribution and the three-dimensional (3D) vector field of the Galactic Magnetic Field.
+This suite of codes, ``gpempy``, has been designed to make it possible to simulate full-sky maps of the Stokes parameters of the linear polarization of the synchrotron and thermal dust emission out of parametric models describing at large scales the matter density distribution and the three-dimensional (3D) vector field of the Galactic Magnetic Field.
 
 ### Goal and features:
 
@@ -36,7 +35,7 @@ The production of full-sky maps of polarized observable requires:
 * to combine the above physical quantities in the appropriated way to model the emission
 * to proceed to the line-of-sight integration to produce the sky maps of the observables.
 
-In the package gpempy the workload is divided into four different modules, each dedicated to handling a specific part of the simulation process.
+In the package ``gpempy`` the workload is divided into four different modules, each dedicated to handling a specific part of the simulation process.
 
 * [GalaxyBasics](GalaxyBasics.py) : that module is devoted
 ** to specify the Galactic space to be taken into account
