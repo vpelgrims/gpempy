@@ -1,0 +1,44 @@
+Arm:
+    - amplitude: 0.2
+      angular_scale: 25.
+      height_scale: .4
+
+    - amplitude: 0.40
+      a_orientation: 0.608
+      height_scale: 0.4
+      angular_scale: 25.
+      pitch_angle: 15.6
+
+    - amplitude: 0.2
+      a_orientation: 0.449
+      height_scale: 0.4
+      pitch_angle: 13.5
+      angular_scale: 25.
+
+    - amplitude: 0.2
+      a_orientation: 0.378
+      height_scale: 0.4
+      pitch_angle: 13.5
+      angular_scale: 25.
+
+Clump:
+    - amplitude: 1.2
+      clumpCentre:
+      - -4.0
+      - -6.2
+      - -3.0
+      radial_scale: 0.3
+
+Loop:
+    - amplitude: 0.8
+    - amplitude: 0.01
+      loopCentre:
+      - -4.0
+      - +6.2
+      - -3.0
+      radial_scale: 0.06
+
+cylHalo:
+    - amplitude: 0.05
+      height_scale: 1.2
+      radial_scale: 10.0
