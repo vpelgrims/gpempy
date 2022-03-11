@@ -1,15 +1,14 @@
     gpempy -- ReadMe
     Copyright (C) 2022  V.Pelgrims
 
-+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
-
+***
 				 G P E M P Y
 
 		    Galactic Polarized EMission in PYthon
 
-+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+***
 
-gpempy has been developed in the framework of the RADIOFOREGROUNDS project (https://radioforegrounds.eu) to reconstruct the large-scale magnetic field of the Milky Way through the observation and analysis of the diffuse polarized emission measured at submillimeter wavelengths by cosmic microwave brackground experiments.
+gpempy has been developed in the framework of the [RADIOFOREGROUNDS](https://radioforegrounds.eu) project to reconstruct the large-scale magnetic field of the Milky Way through the observation and analysis of the diffuse polarized emission measured at submillimeter wavelengths by cosmic microwave brackground experiments.
 
 Specifically, gpempy is a simulation software to create full-sky maps of the synchrotron and thermal dust polarized emission based on three-dimensional parameteric models to describe at large scales the Galactic Magnetic Field and matter density distribution (relativistic electron and dust grain).
 
