@@ -1,6 +1,3 @@
-    gpempy -- ReadMe
-    Copyright (C) 2022  V.Pelgrims
-
 ***
 				 G P E M P Y
 
@@ -25,4 +22,8 @@ If gpempy is useful for you and your research please cite [this](https://doi.org
 "Galactic magnetic field reconstruction using the polarized diffuse Galactic emission: formalism and application to Planck data"
 Pelgrims, Macías-Pérez, Ruppin, Astronomy & Astrophysics, Volume 652, id.A130, 31 pp.
 
+---
+gpempy -- ReadMe
+
+Copyright (C) 2022  V.Pelgrims
 
