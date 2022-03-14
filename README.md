@@ -16,7 +16,7 @@ Specifically, "gpempy" is a simulation software to create full-sky maps of therm
 - GalaxyBasics to handle space grid, coordinate transforms, etc.
 
 ``gpempy`` is modular and can be used to visualize and access models in a user-friendly way.
-More general information on ``gpempy`` can be read [here](GeneralDoc.md).
+More general information on ``gpempy`` can be read [here](GeneralDoc.md) and we present an [overview](https://raw.githack.com/vpelgrims/gpempy/main/gpempy_overview.html), including practical examples, in the notebook.
 
 If ``gpempy`` is useful for you and your research please cite [this](https://doi.org/10.1051/0004-6361/201833962) paper:
 "Galactic magnetic field reconstruction using the polarized diffuse Galactic emission: formalism and application to Planck data"
