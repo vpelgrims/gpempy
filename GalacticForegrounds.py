@@ -243,7 +243,7 @@ def IQU_dust(dust_density,Alpha_Bf,Gamma_Bf,*args,**kwargs):
             stepR = args[2]
 
     ### HERE WE GO
-    dI,dQ,dU = new_dIQU_dust(dust_density,
+    dI,dQ,dU = dIQU_dust(dust_density,
                              Alpha_Bf,
                              Gamma_Bf,
                              **kwargs)

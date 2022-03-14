@@ -1352,13 +1352,14 @@ def Duster(coord,list_of_dusty_things):
             list_of_values = list_of_dusty_things['ARM4']
             for i in range(len(list_of_values)):
                 Dust_density += ARM4(coord,**list_of_values[i])
+                print('''  - ''',key,i+1)
                                         
         #
         elif key == 'RING':
             list_of_values = list_of_dusty_things['RING']
             for i in range(len(list_of_values)):
                 Dust_density += RING(coord,**list_of_values[i])
-                                        
+                print('''  - ''',key,i+1)                                        
         #
         elif key not in ('Halo','cylHalo','Arm','Loop','Clump',
                          'ARM4','RING'):
