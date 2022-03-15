@@ -2724,7 +2724,7 @@ def plot_galactic_Bfield_xz_slice(bfield_model,*args,**kwargs):
     cb = plt.colorbar()
 
     #construct and plot the B field lines
-    step_p = 10*step_p
+    step_p = 100*step_p
     x = np.arange(-x_limite-step_p/2.,x_limite+step_p/2.,step_p)
     z = np.arange(-z_limite-step_p/2.,z_limite+step_p/2.,step_p)
     X,Z = np.meshgrid(x,z)
@@ -2803,6 +2803,8 @@ def plot_sky_projection(bfield_model,*args,**kwargs):
     @author V.Pelgrims
     '''
     import healpy as hp
+    import matplotlib.pyplot as plt
+    import matplotlib
 
     step_r = 0.2
     NSIDE = 64
@@ -2854,7 +2856,7 @@ def plot_sky_projection(bfield_model,*args,**kwargs):
     #
     B_magnitude = (B_r*B_r + B_t*B_t + B_p*B_p)**.5
     NPIX = hp.nside2npix(NSIDE)
-    rSize = B_r.size/NPIX
+    rSize = np.int32(B_r.size/NPIX)
 
     themap = np.sum(np.reshape(B_magnitude,[rSize,NPIX]),axis=0)*step_r
 
@@ -2867,10 +2869,13 @@ def plot_sky_projection(bfield_model,*args,**kwargs):
     if 'colormap' in kwargs.keys():
         cmap = kwargs['colormap']
     else:
-        cmap = plt.get_cmap('jet')
+        #cmap = plt.get_cmap('viridis')
+        cmapc = matplotlib.cm.get_cmap("viridis").copy()
 
+    plt.rcParams['image.cmap'] = cmapc
 
-    hp.mollview(themap,min=cmin,max=cmax,cmap=cmap)
+    hp.mollview(themap,min=cmin,max=cmax,title=r'$|B|$')
+
 
 #    In the future, it would be nice to overplot streamlines of the
 #    integrated projected Bfield...

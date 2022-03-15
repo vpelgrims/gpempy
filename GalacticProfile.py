@@ -1784,8 +1784,9 @@ def plot_sky_projection(dust_model,*args,**kwargs):
                    considered. If not given, default value is 20.0 kpc
 
        **kwargs:
-            Same as for the gb.GalacticTemplate function
-
+            - Same as for the gb.GalacticTemplate function
+            - crange : list or tuple that specifies the min and max value for
+                  the color range. Default is min/max of the created map.
 
     Display the figure using healpy.mollview()
 
@@ -1793,7 +1794,8 @@ def plot_sky_projection(dust_model,*args,**kwargs):
     @author V.Pelgrims
     '''
     import healpy as hp
-
+    import matplotlib
+    import matplotlib.pyplot as plt
 
     step_r = 0.2
     NSIDE = 64
@@ -1810,10 +1812,15 @@ def plot_sky_projection(dust_model,*args,**kwargs):
         elif (len(args) != 0 and len(args) > 3 ):
             raise ValueError('''
         Bad args entry. It has to be either NSIDE or NSIDE,step_r,limite''')
-        
+        #
         for key,value in kwargs.items():
             keyed_args[key] = value
-                
+
+        if 'crange' in kwargs.keys():
+            keyed_args.pop('crange')
+        if 'colormap' in kwargs.keys():
+            keyed_args.pop('colormap')
+
         _,XYZ_gal = gb.GalacticTemplate(NSIDE,
                                         step_r,
                                         limite,
@@ -1831,11 +1838,29 @@ def plot_sky_projection(dust_model,*args,**kwargs):
             ''')
     #
     NPIX = hp.nside2npix(NSIDE)
-    rSize = np.int(dust_model.size/NPIX)
-    hp.mollview(np.sum(np.reshape(dust_model,[rSize,NPIX]),
-                       axis=0)*step_r,
-                norm='log')
+    rSize = np.int32(dust_model.size/NPIX)
+    #
+    themap = np.sum(np.reshape(dust_model,[rSize,NPIX]),axis=0)*step_r
 
+    if 'crange' in kwargs.keys():
+        cmin = np.min(kwargs['crange'])
+        cmax = np.max(kwargs['crange'])
+    else:
+        cmin = themap.min()
+        cmax = themap.max()
+    if 'colormap' in kwargs.keys():
+        cmap = kwargs['colormap']
+    else:
+        #cmap = plt.get_cmap('viridis')
+        cmapc = matplotlib.cm.get_cmap("viridis").copy()
+
+    plt.rcParams['image.cmap'] = cmapc
+
+    hp.mollview(themap,min=cmin,max=cmax,\
+                    norm='log',\
+                    title=r'column density (log)')
+    #
+#
 
 #
 #
