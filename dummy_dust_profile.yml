@@ -1,0 +1,10 @@
+cylHalo:
+- amplitude: 1.0
+  radial_form: Gauss
+  radial_scale: 3.0
+  height_form: HyperbolicSecant
+  height_scale: 0.3
+- amplitude: 0.3
+  height_scale: 0.9
+ARM4:
+- {}
