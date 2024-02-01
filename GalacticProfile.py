@@ -1849,16 +1849,17 @@ def plot_sky_projection(dust_model,*args,**kwargs):
         cmin = themap.min()
         cmax = themap.max()
     if 'colormap' in kwargs.keys():
-        cmap = kwargs['colormap']
+        cmap_name = kwargs['colormap']
     else:
-        #cmap = plt.get_cmap('viridis')
-        cmapc = matplotlib.cm.get_cmap("viridis").copy()
+        cmap_name = 'viridis'
 
-    plt.rcParams['image.cmap'] = cmapc
+    cmapc = matplotlib.colormaps.get_cmap(cmap_name).copy()
 
-    hp.mollview(themap,min=cmin,max=cmax,\
+    hp.mollview(themap,\
+                    cmap=cmapc,min=cmin,max=cmax,\
                     norm='log',\
                     title=r'column density (log)')
+    return
     #
 #
 
