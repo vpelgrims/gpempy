@@ -2867,14 +2867,15 @@ def plot_sky_projection(bfield_model,*args,**kwargs):
         cmin = themap.min()
         cmax = themap.max()
     if 'colormap' in kwargs.keys():
-        cmap = kwargs['colormap']
+        cmap_name = kwargs['colormap']
     else:
-        #cmap = plt.get_cmap('viridis')
-        cmapc = matplotlib.cm.get_cmap("viridis").copy()
+        cmap_name = 'viridis'
 
-    plt.rcParams['image.cmap'] = cmapc
+    cmapc = matplotlib.colormaps.get_cmap(cmap_name).copy()
 
-    hp.mollview(themap,min=cmin,max=cmax,title=r'$|B|$')
+    hp.mollview(themap,cmap=cmapc,min=cmin,max=cmax,title=r'$|B|$')
+
+    return
 
 
 #    In the future, it would be nice to overplot streamlines of the
